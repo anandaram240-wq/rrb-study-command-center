@@ -1,16 +1,32 @@
-# React + Vite
+# 🚂 RRB Group D — Study Command Center
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A premium, dark-themed study command center for RRB Group D CEN 09/2025.
 
-Currently, two official plugins are available:
+🔗 **Live App:** https://anandaram240-wq.github.io/rrb-study-command-center/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- 📋 **Today's Plan** — Daily topics with mastery badges & PYQ insights
+- 📅 **26-Day Plan** — Full Eat The Frog roadmap (Math → Reasoning → Science → GK → Revision)
+- ⭐ **Mastery Tracker** — Rate each topic: Weak / Learning / Good / Mastered
+- 📡 **Analytics Dashboard** — Radar chart, score predictor, priority index, heatmap calendar
+- 📊 **PYQ Analysis** — 3 exam cycles (2018, 2022, 2025-26) topic-wise comparison
+- 🎯 **Cutoff Tracker** — Official ST cutoffs: 55.33 → 43.58 → 63.00 (trend alert!)
+- 📈 **Mock Tracker** — Log tests, track net score trend, reference lines at ST 65 & Target 78
+- ⏱ **Pomodoro Timer** — Study 25 / Short Break 5 / Long Break 15 min
+- 🧮 **Score Simulator** — Live score vs all 3 cutoffs
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Strategy: Eat The Frog 🐸
 
-## Expanding the Oxlint configuration
+Math (25Q) → Reasoning (30Q) → Science (25Q) → GK (20Q) → Revision → EXAM
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Target
+
+- **ST Cutoff 2022:** 43.58 (Chennai Zone)
+- **ST Cutoff 2025-26:** 63.00 ⚠️ Rising!
+- **Expected 2026:** ~65+
+- **Your Target:** 78+ 🎯
+
+## Stack
+
+React 19 · Vite 8 · Recharts · GitHub Pages
