@@ -1,0 +1,121 @@
+.section { position: relative; z-index: 1; padding: 60px 24px; max-width: 1280px; margin: 0 auto; }
+.header { margin-bottom: 28px; }
+.title { font-family: 'Rajdhani', sans-serif; font-size: 1.9rem; font-weight: 700; margin-bottom: 6px; }
+.sub { color: rgba(238,238,255,0.5); font-size: 0.82rem; }
+
+.viewTabs { display: flex; gap: 10px; margin-bottom: 24px; flex-wrap: wrap; }
+.viewTab {
+  padding: 8px 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.04); color: rgba(238,238,255,0.6);
+  font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
+}
+.viewTab:hover { background: rgba(255,255,255,0.08); color: #fff; }
+.viewTabActive { background: rgba(124,109,250,0.15); border-color: #7c6dfa; color: #a89cf7; }
+
+.subjectTabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.subTab {
+  padding: 7px 16px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.04); color: rgba(238,238,255,0.55);
+  font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
+}
+.subTab:hover { color: #fff; }
+.subTabActive { background: rgba(255,255,255,0.06); }
+
+/* Chart */
+.chartBox {
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px; padding: 20px; margin-bottom: 22px;
+}
+.chartTitle { font-size: 0.8rem; font-weight: 700; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* Topic cards */
+.topicsGrid { display: flex; flex-direction: column; gap: 8px; }
+
+.topicCard {
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);
+  border-left: 3px solid var(--c); border-radius: 12px; overflow: hidden;
+  transition: border-color 0.2s;
+}
+.topicCard:hover { border-color: var(--c); }
+
+.topicHeader {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 16px; cursor: pointer; gap: 10px;
+}
+.topicLeft { display: flex; align-items: center; gap: 10px; flex: 1; }
+.topicPriority { font-size: 0.6rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; min-width: 36px; }
+.topicName { font-size: 0.83rem; color: rgba(238,238,255,0.85); font-weight: 500; flex: 1; }
+.topicSubj { font-size: 0.62rem; color: rgba(238,238,255,0.4); background: rgba(255,255,255,0.06); padding: 2px 7px; border-radius: 6px; white-space: nowrap; }
+.topicRight { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.topicAvg { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: 700; }
+.chevron { font-size: 0.85rem; color: rgba(238,238,255,0.3); transition: transform 0.2s; }
+.chevron.open { transform: rotate(180deg); }
+
+/* Trend bars */
+.trendBars {
+  display: flex; align-items: flex-end; gap: 6px; padding: 0 16px 10px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  position: relative;
+}
+.trendBarWrap { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.trendBarCol { width: 18px; height: 40px; display: flex; align-items: flex-end; }
+.trendBarFill { width: 100%; border-radius: 3px 3px 0 0; transition: height 0.5s; min-height: 2px; }
+.trendYr { font-size: 0.5rem; color: rgba(238,238,255,0.3); font-family: 'JetBrains Mono', monospace; }
+.trendLabel { font-size: 0.55rem; color: rgba(238,238,255,0.2); position: absolute; right: 16px; bottom: 10px; }
+
+/* Expanded details */
+.topicDetails { padding: 12px 16px; background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.05); display: flex; flex-direction: column; gap: 10px; }
+.detailSection {}
+.detailTitle { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.tagRow { display: flex; flex-wrap: wrap; gap: 5px; }
+.tag { font-size: 0.7rem; padding: 3px 9px; border-radius: 8px; border: 1px solid; }
+.shortcut { font-size: 0.75rem; color: rgba(238,238,255,0.6); padding: 3px 0; }
+
+/* Priority matrix */
+.sectionHead { font-family: 'Rajdhani', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: rgba(238,238,255,0.85); }
+.matrixGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 28px; }
+.matrixCard {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-top: 3px solid var(--c); border-radius: 14px; padding: 16px;
+  transition: transform 0.25s;
+}
+.matrixCard:hover { transform: translateY(-3px); }
+.matrixTop { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 6px; }
+.matrixSubj { font-family: 'Rajdhani', sans-serif; font-size: 1rem; font-weight: 700; }
+.matrixROI { font-size: 0.6rem; font-weight: 800; padding: 3px 8px; border-radius: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+.matrixRow { display: flex; justify-content: space-between; font-size: 0.78rem; color: rgba(238,238,255,0.6); margin-bottom: 7px; }
+.matrixBar { height: 5px; background: rgba(255,255,255,0.07); border-radius: 3px; overflow: hidden; margin-top: 10px; }
+.matrixFill { height: 100%; border-radius: 3px; }
+
+/* Radar */
+.radarWrap { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 20px; }
+.radarTitle { font-size: 0.8rem; font-weight: 700; color: rgba(238,238,255,0.7); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* Topper cards */
+.toppersGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+.topperCard {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-top: 3px solid var(--c); border-radius: 16px; padding: 20px;
+  transition: transform 0.3s;
+}
+.topperCard:hover { transform: translateY(-4px); }
+.topperTop { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; }
+.topperIcon { font-size: 1.8rem; flex-shrink: 0; }
+.topperName { font-family: 'Rajdhani', sans-serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 2px; }
+.topperExam { font-size: 0.72rem; color: rgba(238,238,255,0.5); margin-bottom: 3px; }
+.topperScore { font-size: 0.78rem; color: rgba(238,238,255,0.6); }
+.topperStrategy { font-size: 0.78rem; color: rgba(238,238,255,0.65); line-height: 1.5; margin-bottom: 12px; font-style: italic; }
+.topperMeta { background: rgba(255,255,255,0.04); border-radius: 10px; padding: 10px 12px; margin-bottom: 12px; }
+.topperRow { display: flex; justify-content: space-between; font-size: 0.75rem; color: rgba(238,238,255,0.5); margin-bottom: 5px; flex-wrap: wrap; gap: 4px; }
+.topperRow:last-child { margin-bottom: 0; }
+.topperRow span:first-child { font-weight: 600; }
+.topperTip { display: flex; gap: 8px; align-items: flex-start; background: rgba(0,230,118,0.07); border: 1px solid rgba(0,230,118,0.2); border-radius: 10px; padding: 10px 12px; }
+.tipIcon { flex-shrink: 0; }
+.topperTip { font-size: 0.77rem; color: rgba(0,230,118,0.9); line-height: 1.5; }
+
+/* Tooltip */
+.tooltip {
+  background: rgba(10,10,20,0.95); border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px; padding: 10px 14px; font-size: 0.8rem;
+}
+.tooltipLabel { color: rgba(238,238,255,0.6); margin-bottom: 5px; font-size: 0.72rem; }

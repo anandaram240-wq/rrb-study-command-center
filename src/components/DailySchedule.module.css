@@ -1,0 +1,126 @@
+.section { position: relative; z-index: 1; padding: 60px 24px; max-width: 1100px; margin: 0 auto; }
+.header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
+.title { font-family: 'Rajdhani', sans-serif; font-size: 1.9rem; font-weight: 700; margin-bottom: 6px; }
+.sub { color: rgba(238,238,255,0.5); font-size: 0.82rem; }
+
+/* Date picker */
+.datePickerWrap { margin-bottom: 20px; }
+.datePicker {
+  display: flex; gap: 8px; overflow-x: auto; padding-bottom: 10px;
+  scrollbar-width: thin; scrollbar-color: rgba(124,109,250,0.4) transparent;
+}
+.dateBtn {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  min-width: 58px; padding: 8px 6px 10px;
+  border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04); cursor: pointer;
+  color: rgba(238,238,255,0.5); transition: all 0.2s; flex-shrink: 0;
+  position: relative;
+}
+.dateBtn:hover { background: rgba(255,255,255,0.07); color: #fff; }
+.dateBtnSel { background: rgba(255,255,255,0.07) !important; border-width: 2px; }
+.dateBtnToday { box-shadow: 0 0 12px rgba(124,109,250,0.25); }
+
+.dateMon { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.5px; }
+.dateDay { font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; font-weight: 700; line-height: 1; }
+.dateWeek { font-size: 0.54rem; color: rgba(238,238,255,0.3); }
+
+.datePct { width: 40px; height: 3px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden; margin-top: 4px; }
+.datePctFill { height: 100%; border-radius: 2px; transition: width 0.5s; }
+
+.todayPing {
+  position: absolute; top: 5px; right: 5px;
+  width: 5px; height: 5px; border-radius: 50%;
+  animation: pingPulse 1.5s ease-in-out infinite;
+}
+@keyframes pingPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.6)} }
+
+.showMoreBtn {
+  min-width: 80px; padding: 8px 12px; border-radius: 12px;
+  border: 1px dashed rgba(255,255,255,0.15); background: none;
+  color: rgba(238,238,255,0.4); font-size: 0.72rem; cursor: pointer;
+  flex-shrink: 0; transition: all 0.2s;
+}
+.showMoreBtn:hover { color: #fff; border-color: rgba(255,255,255,0.3); }
+
+/* Plan box */
+.planBox { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; overflow: hidden; }
+
+.planHeader {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 24px; border-left: 4px solid transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.07); flex-wrap: wrap; gap: 16px;
+}
+.phaseTag { font-size: 0.6rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; display: block; margin-bottom: 4px; }
+.planFocus { font-size: 1rem; font-weight: 600; color: #fff; margin-bottom: 4px; line-height: 1.3; }
+.planDate { font-size: 0.72rem; color: rgba(238,238,255,0.4); }
+
+/* Progress circle */
+.planProgress { display: flex; align-items: center; gap: 14px; }
+.ppCircle {
+  width: 60px; height: 60px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.ppInner {
+  width: 44px; height: 44px; border-radius: 50%; background: #07071a;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.ppNum { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: 700; line-height: 1; }
+.ppLbl { font-size: 0.45rem; color: rgba(238,238,255,0.4); text-transform: uppercase; letter-spacing: 0.5px; }
+.ppStats { display: flex; flex-direction: column; gap: 4px; }
+.ppStat { font-size: 0.72rem; color: rgba(238,238,255,0.55); white-space: nowrap; }
+
+.dayProgBar { height: 3px; background: rgba(255,255,255,0.05); }
+.dayProgFill { height: 100%; transition: width 0.8s ease; }
+
+/* Focus row */
+.focusRow { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; padding: 14px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.focusCard { display: flex; gap: 10px; align-items: flex-start; background: rgba(255,255,255,0.03); border: 1px solid transparent; border-radius: 10px; padding: 10px 12px; }
+.focusLabel { font-size: 0.6rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 3px; }
+.focusTxt { font-size: 0.75rem; color: rgba(238,238,255,0.6); line-height: 1.4; }
+
+/* Timeline */
+.timeline { padding: 10px 16px 16px; display: flex; flex-direction: column; gap: 3px; }
+
+.slot { display: flex; align-items: flex-start; gap: 10px; }
+.slot.slotPast { opacity: 0.4; }
+.slot.slotDone { }
+
+/* Checkbox button */
+.checkBtn {
+  width: 20px; height: 20px; border-radius: 6px; flex-shrink: 0; margin-top: 10px;
+  border: 1.5px solid rgba(255,255,255,0.2); background: transparent;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+}
+.checkBtn:hover { border-color: rgba(255,255,255,0.5); }
+.checkBtnDone { border: none; }
+.checkPlaceholder { width: 20px; height: 20px; flex-shrink: 0; margin-top: 10px; }
+
+.slotTime { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: rgba(238,238,255,0.35); min-width: 38px; padding-top: 11px; text-align: right; flex-shrink: 0; }
+
+.slotCard {
+  flex: 1; display: flex; align-items: center; justify-content: space-between;
+  gap: 8px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+  border-left: 2px solid rgba(255,255,255,0.1); border-radius: 9px;
+  padding: 8px 12px; transition: all 0.2s; flex-wrap: wrap;
+}
+.slot.slotDone .slotCard { background: rgba(0,230,118,0.04); border-left-color: #00e676; }
+.slotCard:hover { background: rgba(255,255,255,0.05); }
+.slot.slotActive .slotCard { box-shadow: 0 0 14px rgba(0,230,118,0.1); }
+
+.slotTask { font-size: 0.8rem; color: rgba(238,238,255,0.78); flex: 1; min-width: 120px; line-height: 1.3; transition: all 0.2s; }
+.slot.slotActive .slotTask { color: #fff; font-weight: 600; }
+
+.slotMeta { display: flex; align-items: center; gap: 6px; flex-shrink: 0; flex-wrap: wrap; }
+.slotDur { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: rgba(238,238,255,0.3); }
+.slotTag { font-size: 0.58rem; font-weight: 800; padding: 2px 7px; border-radius: 6px; letter-spacing: 0.5px; }
+.nowBadge { background: #ff4757; color: #fff; font-size: 0.58rem; font-weight: 800; padding: 2px 7px; border-radius: 6px; animation: glowBadge 1.5s ease-in-out infinite; }
+.doneBadge { background: rgba(0,230,118,0.15); color: #00e676; font-size: 0.58rem; font-weight: 700; padding: 2px 7px; border-radius: 6px; }
+
+@keyframes glowBadge { 0%,100%{box-shadow:0 0 5px rgba(255,71,87,0.4)} 50%{box-shadow:0 0 12px rgba(255,71,87,0.8)} }
+
+.celebration { margin: 16px 16px; padding: 14px 18px; background: rgba(0,230,118,0.1); border: 1px solid rgba(0,230,118,0.3); border-radius: 12px; text-align: center; color: #00e676; font-size: 0.85rem; }
+.celebration strong { font-weight: 800; }
+
+.noPlan { padding: 48px; text-align: center; color: rgba(238,238,255,0.3); font-size: 0.85rem; }

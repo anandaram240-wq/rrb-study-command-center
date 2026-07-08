@@ -1,0 +1,70 @@
+.section { position: relative; z-index: 1; padding: 60px 24px; max-width: 1100px; margin: 0 auto; }
+.header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
+.title { font-family: 'Rajdhani', sans-serif; font-size: 1.9rem; font-weight: 700; margin-bottom: 6px; }
+.sub { color: rgba(238,238,255,0.5); font-size: 0.82rem; }
+
+.addBtn {
+  background: rgba(124,109,250,0.15); border: 1px solid rgba(124,109,250,0.4);
+  color: #a89cf7; font-weight: 700; font-size: 0.8rem;
+  padding: 8px 18px; border-radius: 12px; cursor: pointer; transition: all 0.2s;
+  white-space: nowrap;
+}
+.addBtn:hover { background: rgba(124,109,250,0.25); }
+
+.statsRow { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+.statCard { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 14px 18px; text-align: center; min-width: 80px; }
+.statNum { font-family: 'Rajdhani', sans-serif; font-size: 1.6rem; font-weight: 700; line-height: 1; margin-bottom: 4px; }
+.statLbl { font-size: 0.6rem; color: rgba(238,238,255,0.4); text-transform: uppercase; letter-spacing: 0.4px; }
+
+/* Form */
+.formBox { background: rgba(255,255,255,0.04); border: 1px solid rgba(124,109,250,0.25); border-radius: 16px; padding: 20px; margin-bottom: 20px; }
+.formTitle { font-family: 'Rajdhani', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 16px; color: rgba(238,238,255,0.85); }
+.formGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin-bottom: 12px; }
+.formField { display: flex; flex-direction: column; gap: 5px; padding: 0; }
+.formField span { font-size: 0.72rem; color: rgba(238,238,255,0.55); font-weight: 600; }
+.input {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px; color: #eeeeff; font-size: 0.85rem; padding: 8px 12px;
+  outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;
+  font-family: 'JetBrains Mono', monospace;
+}
+.input:focus { border-color: rgba(124,109,250,0.6); }
+.textarea { resize: vertical; font-family: inherit; }
+.formActions { display: flex; justify-content: space-between; align-items: center; padding: 10px 0 0; flex-wrap: wrap; gap: 10px; }
+.previewScore { font-size: 0.85rem; color: rgba(238,238,255,0.6); }
+.submitBtn {
+  background: linear-gradient(135deg, #7c6dfa, #00d4ff); border: none;
+  border-radius: 12px; color: #fff; font-weight: 700; font-size: 0.82rem;
+  padding: 10px 24px; cursor: pointer; transition: opacity 0.2s;
+}
+.submitBtn:hover { opacity: 0.85; }
+
+/* Chart */
+.chartBox { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 20px; margin-bottom: 20px; }
+.chartTitle { font-size: 0.75rem; font-weight: 700; color: rgba(238,238,255,0.6); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+
+/* Table */
+.tableWrap { overflow-x: auto; border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); }
+.table { width: 100%; border-collapse: collapse; }
+.table th {
+  padding: 10px 12px; font-size: 0.68rem; font-weight: 700; text-align: left;
+  text-transform: uppercase; letter-spacing: 0.5px; color: rgba(238,238,255,0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03);
+}
+.table td {
+  padding: 10px 12px; font-size: 0.78rem; color: rgba(238,238,255,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-family: 'JetBrains Mono', monospace;
+}
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: rgba(255,255,255,0.03); }
+.rowGood { }
+.rowWarn { }
+.rowBad { }
+
+.statusBadge { font-size: 0.65rem; font-weight: 700; padding: 3px 9px; border-radius: 8px; white-space: nowrap; font-family: inherit; }
+.delBtn { background: none; border: none; color: rgba(255,71,87,0.5); cursor: pointer; font-size: 0.85rem; padding: 2px 6px; border-radius: 6px; transition: color 0.2s; }
+.delBtn:hover { color: #ff4757; }
+
+.empty { text-align: center; padding: 48px; color: rgba(238,238,255,0.4); display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.empty div:first-child { font-size: 2rem; }

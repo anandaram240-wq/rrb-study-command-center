@@ -1,0 +1,116 @@
+.section { position: relative; z-index: 1; padding: 60px 24px; max-width: 1280px; margin: 0 auto; }
+.header { margin-bottom: 28px; }
+.title { font-family: 'Rajdhani', sans-serif; font-size: 1.9rem; font-weight: 700; margin-bottom: 6px; }
+.sub { color: rgba(238,238,255,0.55); font-size: 0.85rem; }
+
+.overviewWrap {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 28px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 24px;
+  backdrop-filter: blur(12px);
+  flex-wrap: wrap;
+}
+
+.pieBox {
+  position: relative;
+  width: 220px;
+  min-width: 220px;
+  height: 220px;
+  flex-shrink: 0;
+}
+.pieCenter {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+.pieBig { font-family: 'Rajdhani', sans-serif; font-size: 2rem; font-weight: 700; }
+.pieSmall { font-size: 0.65rem; color: rgba(238,238,255,0.45); text-transform: uppercase; letter-spacing: 1px; }
+
+.legend { flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: 10px; }
+.legendItem { display: flex; align-items: center; gap: 10px; }
+.legendDot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.legendName { flex: 1; font-size: 0.82rem; color: rgba(238,238,255,0.7); }
+.legendQ { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; font-weight: 600; }
+
+.cutoffBox {
+  margin-top: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+.cutoffTitle { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: rgba(238,238,255,0.4); margin-bottom: 8px; }
+.cutoffRow { display: flex; justify-content: space-between; font-size: 0.78rem; color: rgba(238,238,255,0.65); margin-bottom: 5px; }
+.cutRed { color: #ff4757; font-weight: 700; }
+.cutGreen { color: #00e676; font-weight: 700; }
+.cutAmber { color: #ffc107; font-weight: 700; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; }
+
+.card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
+
+.cardTop {
+  padding: 18px 20px 14px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  gap: 10px;
+}
+.topLeft { display: flex; align-items: flex-start; gap: 12px; }
+.icon { font-size: 1.8rem; flex-shrink: 0; }
+.name { font-family: 'Rajdhani', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--color); margin-bottom: 2px; }
+.meta { font-size: 0.72rem; color: rgba(238,238,255,0.5); }
+
+.badge {
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.barWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.barTrack { flex: 1; height: 6px; background: rgba(255,255,255,0.07); border-radius: 3px; overflow: hidden; }
+.barFill { height: 100%; border-radius: 3px; transition: width 1.5s cubic-bezier(0.4,0,0.2,1); }
+.barNum { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 600; min-width: 44px; text-align: right; }
+
+.topics { padding: 12px 20px; }
+.topicRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.topicRow:last-child { border-bottom: none; }
+.topicDot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.topicName { flex: 1; font-size: 0.78rem; color: rgba(238,238,255,0.65); }
+.topicWeight { font-size: 0.65rem; }
+.topicQ { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 700; min-width: 24px; text-align: right; }
+.miniTrack { width: 44px; height: 3px; background: rgba(255,255,255,0.07); border-radius: 2px; overflow: hidden; flex-shrink: 0; }
+.miniFill { height: 100%; border-radius: 2px; }
